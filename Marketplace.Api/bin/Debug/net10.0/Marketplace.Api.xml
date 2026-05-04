@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Marketplace.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Marketplace.Api.Controllers.ContractorsController">
+            <summary>Manages contractor operations in the marketplace.</summary>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.ContractorsController.#ctor(MediatR.IMediator)">
+            <summary>Initializes a new instance of the <see cref="T:Marketplace.Api.Controllers.ContractorsController"/> class.</summary>
+            <param name="mediator">The MediatR mediator instance.</param>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.ContractorsController.GetById(System.Guid)">
+            <summary>Get a contractor by ID.</summary>
+            <param name="id">Contractor ID</param>
+            <returns>Contractor details</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.ContractorsController.GetAll(System.Int32,System.Int32)">
+            <summary>Get all contractors with pagination.</summary>
+            <param name="page">Page number (default: 1)</param>
+            <param name="pageSize">Page size (default: 10)</param>
+            <returns>Paginated list of contractors</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.ContractorsController.SearchByName(System.String)">
+            <summary>Search contractors by name.</summary>
+            <param name="name">Name to search for</param>
+            <returns>Contractors matching the search criteria</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.ContractorsController.Create(Marketplace.Core.Dtos.CreateContractorDto)">
+            <summary>Create a new contractor.</summary>
+            <param name="dto">Contractor creation details</param>
+            <returns>Created contractor</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.ContractorsController.Update(System.Guid,Marketplace.Core.Dtos.UpdateContractorDto)">
+            <summary>Update an existing contractor.</summary>
+            <param name="id">Contractor ID</param>
+            <param name="dto">Updated contractor details</param>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.ContractorsController.Delete(System.Guid)">
+            <summary>Delete a contractor.</summary>
+            <param name="id">Contractor ID</param>
+        </member>
+        <member name="T:Marketplace.Api.Controllers.CustomersController">
+            <summary>Manages customer operations in the marketplace.</summary>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.CustomersController.#ctor(MediatR.IMediator)">
+            <summary>Initializes a new instance of the <see cref="T:Marketplace.Api.Controllers.CustomersController"/> class.</summary>
+            <param name="mediator">The MediatR mediator instance.</param>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.CustomersController.GetById(System.Guid)">
+            <summary>Get a customer by ID.</summary>
+            <param name="id">Customer ID</param>
+            <returns>Customer details</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.CustomersController.GetAll(System.Int32,System.Int32)">
+            <summary>Get all customers with pagination.</summary>
+            <param name="page">Page number (default: 1)</param>
+            <param name="pageSize">Page size (default: 10)</param>
+            <returns>Paginated list of customers</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.CustomersController.SearchByLastName(System.String)">
+            <summary>Search customers by last name.</summary>
+            <param name="lastName">Last name to search for</param>
+            <returns>Customers matching the search criteria</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.CustomersController.Create(Marketplace.Api.Dtos.CreateCustomerDto)">
+            <summary>Create a new customer.</summary>
+            <param name="dto">Customer creation details</param>
+            <returns>Created customer</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.CustomersController.Update(System.Guid,Marketplace.Api.Dtos.UpdateCustomerDto)">
+            <summary>Update an existing customer.</summary>
+            <param name="id">Customer ID</param>
+            <param name="dto">Updated customer details</param>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.CustomersController.Delete(System.Guid)">
+            <summary>Delete a customer.</summary>
+            <param name="id">Customer ID</param>
+        </member>
+        <member name="T:Marketplace.Api.Controllers.JobOffersController">
+            <summary>Manages job offer operations in the marketplace.</summary>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.JobOffersController.#ctor(MediatR.IMediator)">
+            <summary>Initializes a new instance of the <see cref="T:Marketplace.Api.Controllers.JobOffersController"/> class.</summary>
+            <param name="mediator">The MediatR mediator instance.</param>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.JobOffersController.GetById(System.Guid)">
+            <summary>Get a job offer by ID.</summary>
+            <param name="id">Job Offer ID</param>
+            <returns>Job Offer details</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.JobOffersController.GetAll(System.Int32,System.Int32)">
+            <summary>Get all job offers with pagination.</summary>
+            <param name="page">Page number (default: 1)</param>
+            <param name="pageSize">Page size (default: 10)</param>
+            <returns>Paginated list of job offers</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.JobOffersController.Create(Marketplace.Core.Dtos.CreateJobOfferDto)">
+            <summary>Create a new job offer.</summary>
+            <param name="dto">Job Offer creation details</param>
+            <returns>Created job offer</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.JobOffersController.Delete(System.Guid)">
+            <summary>Delete a job offer.</summary>
+            <param name="id">Job Offer ID</param>
+        </member>
+        <member name="T:Marketplace.Api.Controllers.JobsController">
+            <summary>Manages job operations in the marketplace.</summary>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.JobsController.#ctor(MediatR.IMediator)">
+            <summary>Initializes a new instance of the <see cref="T:Marketplace.Api.Controllers.JobsController"/> class.</summary>
+            <param name="mediator">The MediatR mediator instance.</param>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.JobsController.GetById(System.Guid)">
+            <summary>Get a job by ID.</summary>
+            <param name="id">Job ID</param>
+            <returns>Job details</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.JobsController.GetAll(System.Int32,System.Int32)">
+            <summary>Get all jobs with pagination.</summary>
+            <param name="page">Page number (default: 1)</param>
+            <param name="pageSize">Page size (default: 10)</param>
+            <returns>Paginated list of jobs</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.JobsController.Create(Marketplace.Core.Dtos.CreateJobDto)">
+            <summary>Create a new job.</summary>
+            <param name="dto">Job creation details</param>
+            <returns>Created job</returns>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.JobsController.Update(System.Guid,Marketplace.Core.Dtos.UpdateJobDto)">
+            <summary>Update an existing job.</summary>
+            <param name="id">Job ID</param>
+            <param name="dto">Updated job details</param>
+        </member>
+        <member name="M:Marketplace.Api.Controllers.JobsController.Delete(System.Guid)">
+            <summary>Delete a job.</summary>
+            <param name="id">Job ID</param>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.ContractorDto">
+            <summary>Data transfer object for contractor information.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.ContractorDto.Id">
+            <summary>Gets or sets the contractor ID.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.ContractorDto.Name">
+            <summary>Gets or sets the contractor's name.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.ContractorDto.Rating">
+            <summary>Gets or sets the contractor's rating.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.CreateContractorDto">
+            <summary>Data transfer object for creating a new contractor.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateContractorDto.Name">
+            <summary>Gets or sets the contractor's name.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateContractorDto.Rating">
+            <summary>Gets or sets the contractor's rating.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.UpdateContractorDto">
+            <summary>Data transfer object for updating an existing contractor.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.UpdateContractorDto.Name">
+            <summary>Gets or sets the contractor's name.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.UpdateContractorDto.Rating">
+            <summary>Gets or sets the contractor's rating.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.CustomerDto">
+            <summary>Data transfer object for customer information.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CustomerDto.Id">
+            <summary>Gets or sets the customer ID.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CustomerDto.FirstName">
+            <summary>Gets or sets the customer's first name.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CustomerDto.LastName">
+            <summary>Gets or sets the customer's last name.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.CreateCustomerDto">
+            <summary>Data transfer object for creating a new customer.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateCustomerDto.FirstName">
+            <summary>Gets or sets the customer's first name.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateCustomerDto.LastName">
+            <summary>Gets or sets the customer's last name.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.UpdateCustomerDto">
+            <summary>Data transfer object for updating an existing customer.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.UpdateCustomerDto.FirstName">
+            <summary>Gets or sets the customer's first name.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.UpdateCustomerDto.LastName">
+            <summary>Gets or sets the customer's last name.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.JobDto">
+            <summary>Data transfer object for job information.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.JobDto.Id">
+            <summary>Gets or sets the job ID.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.JobDto.StartDate">
+            <summary>Gets or sets the job start date.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.JobDto.DueDate">
+            <summary>Gets or sets the job due date.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.JobDto.Budget">
+            <summary>Gets or sets the job budget.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.JobDto.Description">
+            <summary>Gets or sets the job description.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.JobDto.AcceptedJobOfferId">
+            <summary>Gets or sets the accepted job offer ID.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.CreateJobDto">
+            <summary>Data transfer object for creating a new job.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateJobDto.CustomerId">
+            <summary>Gets or sets the customer ID.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateJobDto.StartDate">
+            <summary>Gets or sets the job start date.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateJobDto.DueDate">
+            <summary>Gets or sets the job due date.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateJobDto.Budget">
+            <summary>Gets or sets the job budget.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateJobDto.Description">
+            <summary>Gets or sets the job description.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.UpdateJobDto">
+            <summary>Data transfer object for updating an existing job.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.UpdateJobDto.StartDate">
+            <summary>Gets or sets the job start date.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.UpdateJobDto.DueDate">
+            <summary>Gets or sets the job due date.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.UpdateJobDto.Budget">
+            <summary>Gets or sets the job budget.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.UpdateJobDto.Description">
+            <summary>Gets or sets the job description.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.JobOfferDto">
+            <summary>Data transfer object for job offer information.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.JobOfferDto.Id">
+            <summary>Gets or sets the job offer ID.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.JobOfferDto.JobId">
+            <summary>Gets or sets the job ID.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.JobOfferDto.ContractorId">
+            <summary>Gets or sets the contractor ID.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.JobOfferDto.Price">
+            <summary>Gets or sets the offered price.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.CreateJobOfferDto">
+            <summary>Data transfer object for creating a new job offer.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateJobOfferDto.JobId">
+            <summary>Gets or sets the job ID.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateJobOfferDto.ContractorId">
+            <summary>Gets or sets the contractor ID.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.CreateJobOfferDto.Price">
+            <summary>Gets or sets the offered price.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Dtos.UpdateJobOfferDto">
+            <summary>Data transfer object for updating an existing job offer.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Dtos.UpdateJobOfferDto.Price">
+            <summary>Gets or sets the offered price.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Middleware.ErrorHandlingMiddleware">
+            <summary>Middleware for handling exceptions and errors in the application.</summary>
+        </member>
+        <member name="M:Marketplace.Api.Middleware.ErrorHandlingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Marketplace.Api.Middleware.ErrorHandlingMiddleware})">
+            <summary>Initializes a new instance of the <see cref="T:Marketplace.Api.Middleware.ErrorHandlingMiddleware"/> class.</summary>
+            <param name="next">The next middleware in the pipeline.</param>
+            <param name="logger">The logger instance.</param>
+        </member>
+        <member name="M:Marketplace.Api.Middleware.ErrorHandlingMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>Invokes the middleware to process the HTTP request.</summary>
+            <param name="context">The HTTP context.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:Marketplace.Api.Models.PagedResult`1">
+            <summary>Represents a paginated result set of items.</summary>
+            <typeparam name="T">The type of items in the result set.</typeparam>
+        </member>
+        <member name="P:Marketplace.Api.Models.PagedResult`1.Items">
+            <summary>Gets or sets the collection of items in the current page.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Models.PagedResult`1.TotalCount">
+            <summary>Gets or sets the total count of items across all pages.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Models.PagedResult`1.Page">
+            <summary>Gets or sets the current page number.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Models.PagedResult`1.PageSize">
+            <summary>Gets or sets the size of each page.</summary>
+        </member>
+        <member name="P:Marketplace.Api.Models.PagedResult`1.TotalPages">
+            <summary>Gets the total number of pages.</summary>
+        </member>
+        <member name="T:Marketplace.Api.Models.QueryParams">
+            <summary>Record representing query parameters for pagination and sorting.</summary>
+        </member>
+        <member name="M:Marketplace.Api.Models.QueryParams.#ctor(System.Int32,System.Int32,System.String,System.String)">
+            <summary>Record representing query parameters for pagination and sorting.</summary>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type)">
+            <summary>
+            Generates a documentation comment ID for a type.
+            Example: T:Namespace.Outer+Inner`1 becomes T:Namespace.Outer.Inner`1
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.PropertyInfo)">
+            <summary>
+            Generates a documentation comment ID for a property.
+            Example: P:Namespace.ContainingType.PropertyName or for an indexer P:Namespace.ContainingType.Item(System.Int32)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type,System.String)">
+            <summary>
+            Generates a documentation comment ID for a property given its container type and property name.
+            Example: P:Namespace.ContainingType.PropertyName
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.MethodInfo)">
+            <summary>
+            Generates a documentation comment ID for a method (or constructor).
+            For example:
+              M:Namespace.ContainingType.MethodName(ParamType1,ParamType2)~ReturnType
+              M:Namespace.ContainingType.#ctor(ParamType)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.GetTypeDocId(System.Type,System.Boolean,System.Boolean)">
+            <summary>
+            Generates a documentation ID string for a type.
+            This method handles nested types (replacing '+' with '.'),
+            generic types, arrays, pointers, by-ref types, and generic parameters.
+            The <paramref name="includeGenericArguments"/> flag controls whether
+            constructed generic type arguments are emitted, while <paramref name="omitGenericArity"/>
+            controls whether the generic arity marker (e.g. "`1") is appended.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.NormalizeDocId(System.String)">
+            <summary>
+            Normalizes a documentation comment ID to match the compiler-style format.
+            Strips the return type suffix for ordinary methods but retains it for conversion operators.
+            </summary>
+            <param name="docId">The documentation comment ID to normalize.</param>
+            <returns>The normalized documentation comment ID.</returns>
+        </member>
+    </members>
+</doc>
